@@ -2,6 +2,7 @@
 
 const getGoods = () => {
   const links = document.querySelectorAll(".navigation-link");
+  const more = document.querySelector('.more');
 
   const renderGoods = (hello) => {
     const goodContaner = document.querySelector(".long-goods-list");
@@ -64,6 +65,15 @@ const getGoods = () => {
   console.log(localStorage);
   // localStorage.removeItem('hello');
   // console.log(localStorage);
+if(more){
+    more.addEventListener('click', (event)=>{
+      event.preventDefault();
+
+     
+      linkData();  
+    })
+}
+  
 };
 
 getGoods();
